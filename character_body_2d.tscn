@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://ca5t1kkqe0y1u"]
+[gd_scene load_steps=14 format=3 uid="uid://ca5t1kkqe0y1u"]
 
+[ext_resource type="Script" uid="uid://pgp3qoxct3sa" path="res://player.gd" id="1_ghijl"]
 [ext_resource type="Texture2D" uid="uid://ciqa1ahxc687d" path="res://art/player _raft.png" id="1_ij6vw"]
 [ext_resource type="Texture2D" uid="uid://0pq3onpt088" path="res://art/player _raft2.png" id="2_ghijl"]
 
@@ -82,10 +83,26 @@ animations = [{
 "speed": 3.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ij6vw"]
+radius = 36.0
+height = 136.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+[node name="Node2D" type="Node2D"]
+
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(240, 600)
+script = ExtResource("1_ghijl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
+position = Vector2(5, 5)
+scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_wyqjk")
-animation = &"up"
-frame_progress = 0.526856
+animation = &"down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2(6, -3)
+shape = SubResource("CapsuleShape2D_ij6vw")
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(5, -5)
+position_smoothing_enabled = true
