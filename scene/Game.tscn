@@ -1,26 +1,25 @@
 [gd_scene load_steps=4 format=3 uid="uid://dk1u72iia66ry"]
 
-[ext_resource type="Script" uid="uid://dif7khgfo3ep0" path="res://scene/background.gd" id="1_4aemu"]
-[ext_resource type="Texture2D" uid="uid://drktu1alh8ur2" path="res://art/agua.png" id="2_e7hha"]
-[ext_resource type="Texture2D" uid="uid://op1wtcely28y" path="res://art/bg.png" id="3_t585p"]
+[ext_resource type="PackedScene" uid="uid://b4am15yp6861k" path="res://background.tscn" id="1_e7hha"]
+[ext_resource type="Texture2D" uid="uid://q6lpmn6iby5h" path="res://art/objects.png" id="2_t585p"]
+[ext_resource type="PackedScene" uid="uid://ca5t1kkqe0y1u" path="res://scene/character_body_2d.tscn" id="4_vg7sv"]
 
-[node name="Main" type="Node2D"]
+[node name="Game" type="Node2D"]
 
-[node name="Background" type="Node2D" parent="."]
-script = ExtResource("1_4aemu")
+[node name="Background" parent="." instance=ExtResource("1_e7hha")]
+position = Vector2(0, 2)
 
-[node name="BG1" type="Sprite2D" parent="Background"]
-position = Vector2(-2088, 248)
-scale = Vector2(1.4773, 202561)
-texture = ExtResource("2_e7hha")
-centered = false
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+texture_filter = 2
+texture_repeat = 2
+position = Vector2(355, 277)
+scale = Vector2(0.21558, 0.195285)
+texture = ExtResource("2_t585p")
+region_enabled = true
+region_rect = Rect2(58, 202, 207, 224)
+region_filter_clip_enabled = true
 
-[node name="BG2" type="Sprite2D" parent="Background"]
-position = Vector2(-2088, 248)
-scale = Vector2(1.48, 1.492)
-texture = ExtResource("3_t585p")
-centered = false
-offset = Vector2(0, -3000)
+[node name="Node2D" parent="." instance=ExtResource("4_vg7sv")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.1, 0.1)

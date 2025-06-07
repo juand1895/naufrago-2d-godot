@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4am15yp6861k"]
+
+[ext_resource type="Script" uid="uid://dif7khgfo3ep0" path="res://scene/background.gd" id="1_xehqc"]
+[ext_resource type="Texture2D" uid="uid://drktu1alh8ur2" path="res://art/agua.png" id="2_splo0"]
+[ext_resource type="Texture2D" uid="uid://op1wtcely28y" path="res://art/bg.png" id="3_eq6nc"]
+
+[node name="Background" type="Node2D"]
+script = ExtResource("1_xehqc")
+
+[node name="BG1" type="Sprite2D" parent="."]
+position = Vector2(-2088, 248)
+scale = Vector2(1.4773, 202561)
+texture = ExtResource("2_splo0")
+centered = false
+
+[node name="BG2" type="Sprite2D" parent="."]
+position = Vector2(-2088, 248)
+scale = Vector2(1.48, 1.492)
+texture = ExtResource("3_eq6nc")
+centered = false
+offset = Vector2(0, -3000)
