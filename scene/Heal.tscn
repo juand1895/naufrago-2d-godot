@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccua6jd3pd48h"]
+
+[ext_resource type="Texture2D" uid="uid://q6lpmn6iby5h" path="res://art/objects.png" id="1_hlovb"]
+[ext_resource type="Script" uid="uid://ccl4v384qgo5i" path="res://scene/heal.gd" id="1_r20tb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hlovb"]
+radius = 27.0185
+
+[node name="Heal" type="Node2D"]
+script = ExtResource("1_r20tb")
+
+[node name="HealItem" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="HealItem"]
+position = Vector2(29, 30.5)
+scale = Vector2(0.231481, 0.245193)
+texture = ExtResource("1_hlovb")
+region_enabled = true
+region_rect = Rect2(800, 208, 216, 208)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealItem"]
+position = Vector2(29, 30)
+shape = SubResource("CircleShape2D_hlovb")
+
+[connection signal="body_entered" from="HealItem" to="." method="_on_heal_item_body_entered"]

@@ -3,6 +3,8 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var speed: float = 200.0
 @onready var sprite = $AnimatedSprite2D
+var health = 80
+var max_health = 100
 
 func _physics_process(delta):
 	var direction := Vector2.ZERO
@@ -36,3 +38,7 @@ func _physics_process(delta):
 			sprite.play()
 	else:
 		sprite.stop()
+		
+func heal(amount: int):
+	health = min(health + amount, max_health)
+	print("Cura recibida! Vida actual:", health)
