@@ -5,6 +5,7 @@ var speed: float = 200.0
 @onready var sprite = $AnimatedSprite2D
 var health = 80
 var max_health = 100
+var vida = 100
 
 func _physics_process(delta):
 	var direction := Vector2.ZERO
@@ -42,3 +43,10 @@ func _physics_process(delta):
 func heal(amount: int):
 	health = min(health + amount, max_health)
 	print("Cura recibida! Vida actual:", health)
+	
+func take_damage(amount):
+	vida -= amount
+	print("Daño recibido. Vida actual: ", vida)
+
+	if vida <= 0:
+		print("GAME OVER")
