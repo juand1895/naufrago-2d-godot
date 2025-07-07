@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk1u72iia66ry"]
+
+[ext_resource type="PackedScene" uid="uid://b4am15yp6861k" path="res://background.tscn" id="1_e7hha"]
+[ext_resource type="Texture2D" uid="uid://q6lpmn6iby5h" path="res://art/objects.png" id="2_t585p"]
+[ext_resource type="Script" uid="uid://1kkb5hddt08a" path="res://scene/spawner.gd" id="4_ripxc"]
+[ext_resource type="PackedScene" uid="uid://ca5t1kkqe0y1u" path="res://scene/character_body_2d.tscn" id="4_vg7sv"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1_e7hha")]
+position = Vector2(0, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+texture_filter = 2
+texture_repeat = 2
+position = Vector2(355, 277)
+scale = Vector2(0.21558, 0.195285)
+texture = ExtResource("2_t585p")
+region_enabled = true
+region_rect = Rect2(58, 202, 207, 224)
+region_filter_clip_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("4_vg7sv")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.1, 0.1)
+
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource("4_ripxc")
+
+[node name="Timer" type="Timer" parent="Spawner"]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4nvhgkpuup5t"
-path="res://.godot/imported/gemii.png-95a61a308302be1e10fc3c5bfc6420df.ctex"
+uid="uid://q6lpmn6iby5h"
+path="res://.godot/imported/objects.png-70e7284227060a3ae74917640f1e1f26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/gemii.png"
-dest_files=["res://.godot/imported/gemii.png-95a61a308302be1e10fc3c5bfc6420df.ctex"]
+source_file="res://assets/objects.png"
+dest_files=["res://.godot/imported/objects.png-70e7284227060a3ae74917640f1e1f26.ctex"]
 
 [params]
 
