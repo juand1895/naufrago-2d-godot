@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ciqa1ahxc687d"
-path="res://.godot/imported/player _raft.png-776326eb6256e721a1059db860646d53.ctex"
+path="res://.godot/imported/player _raft.png-f918f276d1a420383577a1339b897943.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/player _raft.png"
-dest_files=["res://.godot/imported/player _raft.png-776326eb6256e721a1059db860646d53.ctex"]
+source_file="res://assets/player _raft.png"
+dest_files=["res://.godot/imported/player _raft.png-f918f276d1a420383577a1339b897943.ctex"]
 
 [params]
 

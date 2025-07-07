@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://op1wtcely28y"
-path="res://.godot/imported/bg.png-ca4dd02b5a08671d1e8200d74b5e8347.ctex"
+uid="uid://0pq3onpt088"
+path="res://.godot/imported/player _raft2.png-8263887236c583cf58aaefebc75896e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/bg.png"
-dest_files=["res://.godot/imported/bg.png-ca4dd02b5a08671d1e8200d74b5e8347.ctex"]
+source_file="res://assets/player _raft2.png"
+dest_files=["res://.godot/imported/player _raft2.png-8263887236c583cf58aaefebc75896e3.ctex"]
 
 [params]
 

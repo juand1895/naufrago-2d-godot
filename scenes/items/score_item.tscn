@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvfttxs88y1i5"]
+
+[ext_resource type="Script" uid="uid://b82vfcls13ry7" path="res://scenes/items/score_item.gd" id="1_b34xy"]
+[ext_resource type="Texture2D" uid="uid://q6lpmn6iby5h" path="res://assets/objects.png" id="2_q014g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkcg0"]
+size = Vector2(42, 38)
+
+[node name="Score_item" type="Area2D"]
+script = ExtResource("1_b34xy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(273, 146)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_q014g")
+region_enabled = true
+region_rect = Rect2(560, 208, 208, 192)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(273, 146)
+shape = SubResource("RectangleShape2D_mkcg0")
