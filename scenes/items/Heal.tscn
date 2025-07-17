@@ -21,5 +21,5 @@ region_rect = Rect2(800, 208, 216, 208)
 position = Vector2(252, 51)
 shape = SubResource("CircleShape2D_hlovb")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="." to="." method="_on_heal_item_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -9,7 +9,10 @@ var health = 80
 var max_health = 100
 var vida = 100
 
+
 func _physics_process(delta):
+
+	#position.y += 50 * delta
 	var direction := Vector2.ZERO
 	if Input.is_action_pressed("move_up"):
 		direction.y -= 1
@@ -23,6 +26,16 @@ func _physics_process(delta):
 	direction = direction.normalized()
 	velocity = direction * speed
 	move_and_slide()
+	
+	# Control de velocidad del scroll (independiente del movimiento)
+	var background = get_parent().get_node("Background")  # Ajustá si es necesario
+
+	if Input.is_action_pressed("move_up"):
+		background.scroll_speed = 1500
+	elif Input.is_action_pressed("move_down"):
+		background.scroll_speed = 300
+	else:
+		background.scroll_speed = 500
 
 	# Cambiar animación según dirección
 	if direction != Vector2.ZERO:
