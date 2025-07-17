@@ -92,15 +92,15 @@ collision_mask = 2
 script = ExtResource("1_gmlin")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(225, 643)
+position = Vector2(252, 637)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_75vfm")
 animation = &"right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(228, 632)
+position = Vector2(244, 625)
 shape = SubResource("CapsuleShape2D_0owmy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(238, 638)
-position_smoothing_enabled = true
+position = Vector2(240, 622)
+ignore_rotation = false
