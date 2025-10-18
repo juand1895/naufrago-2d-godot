@@ -1,0 +1,136 @@
+[gd_scene load_steps=10 format=3 uid="uid://do82esqo1ty6d"]
+
+[ext_resource type="Texture2D" uid="uid://c6qpqlttq15h6" path="res://assets/water.png" id="1_5wx1s"]
+[ext_resource type="Texture2D" uid="uid://dwwyjyp5lfh1f" path="res://assets/piedraBorde.png" id="2_p6t76"]
+[ext_resource type="PackedScene" uid="uid://d3r8mxgisgrym" path="res://scenes/jugador.tscn" id="3_41r3f"]
+[ext_resource type="Script" uid="uid://c32m2ss4gl5hy" path="res://scripts/generador_objetos.gd" id="4_limju"]
+[ext_resource type="PackedScene" uid="uid://qtgl7ugfl2u8" path="res://scenes/HUD.tscn" id="5_kgnyf"]
+[ext_resource type="PackedScene" uid="uid://pox5ao6hg4oa" path="res://scenes/barco.tscn" id="6_xc6uk"]
+[ext_resource type="AudioStream" uid="uid://md7yh4m481uh" path="res://music/exploracion.wav" id="7_f1ijh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6t76"]
+size = Vector2(49.828, 1163.7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_41r3f"]
+size = Vector2(87, 1149)
+
+[node name="Juego" type="Node2D"]
+
+[node name="Fondo" type="TextureRect" parent="."]
+offset_top = -8.0
+offset_right = 65.0
+offset_bottom = 109.0
+scale = Vector2(10, 10)
+texture = ExtResource("1_5wx1s")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Rocas" type="Node2D" parent="."]
+
+[node name="RocaIzquierda" type="StaticBody2D" parent="Rocas"]
+position = Vector2(112, 16)
+
+[node name="Sprite2D" type="Sprite2D" parent="Rocas/RocaIzquierda"]
+position = Vector2(-104.778, 70.75)
+scale = Vector2(0.236132, 0.236132)
+texture = ExtResource("2_p6t76")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Rocas/RocaIzquierda"]
+position = Vector2(-104, 224)
+scale = Vector2(0.236132, 0.236132)
+texture = ExtResource("2_p6t76")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Rocas/RocaIzquierda"]
+position = Vector2(-104.778, 382.75)
+scale = Vector2(0.236132, 0.236132)
+texture = ExtResource("2_p6t76")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Rocas/RocaIzquierda"]
+position = Vector2(-104, 536)
+scale = Vector2(0.236132, 0.236132)
+texture = ExtResource("2_p6t76")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Rocas/RocaIzquierda"]
+position = Vector2(-96, 704)
+scale = Vector2(0.236132, 0.236132)
+texture = ExtResource("2_p6t76")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Rocas/RocaIzquierda"]
+position = Vector2(-88, 824)
+scale = Vector2(0.236132, 0.236132)
+texture = ExtResource("2_p6t76")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Rocas/RocaIzquierda"]
+position = Vector2(-96, 944)
+scale = Vector2(0.236132, 0.236132)
+texture = ExtResource("2_p6t76")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Rocas/RocaIzquierda"]
+position = Vector2(-88, 1072)
+scale = Vector2(0.236132, 0.236132)
+texture = ExtResource("2_p6t76")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rocas/RocaIzquierda"]
+position = Vector2(-47.8637, 568.898)
+shape = SubResource("RectangleShape2D_p6t76")
+
+[node name="RocaDerecha" type="StaticBody2D" parent="Rocas"]
+position = Vector2(616, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="Rocas/RocaDerecha"]
+position = Vector2(-32, 104)
+scale = Vector2(0.182427, 0.182427)
+texture = ExtResource("2_p6t76")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Rocas/RocaDerecha"]
+position = Vector2(-16, 256)
+scale = Vector2(0.182427, 0.182427)
+texture = ExtResource("2_p6t76")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Rocas/RocaDerecha"]
+position = Vector2(-16, 1096)
+scale = Vector2(0.182427, 0.182427)
+texture = ExtResource("2_p6t76")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Rocas/RocaDerecha"]
+position = Vector2(-32, 976)
+scale = Vector2(0.182427, 0.182427)
+texture = ExtResource("2_p6t76")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Rocas/RocaDerecha"]
+position = Vector2(-24, 832)
+scale = Vector2(0.182427, 0.182427)
+texture = ExtResource("2_p6t76")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Rocas/RocaDerecha"]
+position = Vector2(-7.99998, 688)
+scale = Vector2(0.182427, 0.182427)
+texture = ExtResource("2_p6t76")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Rocas/RocaDerecha"]
+position = Vector2(-16, 536)
+scale = Vector2(0.182427, 0.182427)
+texture = ExtResource("2_p6t76")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Rocas/RocaDerecha"]
+position = Vector2(-24, 376)
+scale = Vector2(0.182427, 0.182427)
+texture = ExtResource("2_p6t76")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rocas/RocaDerecha"]
+position = Vector2(-40, 568)
+shape = SubResource("RectangleShape2D_41r3f")
+
+[node name="Jugador" parent="." instance=ExtResource("3_41r3f")]
+position = Vector2(288, 960)
+
+[node name="generadorObjetos" type="Node2D" parent="."]
+script = ExtResource("4_limju")
+
+[node name="HUD" parent="." instance=ExtResource("5_kgnyf")]
+
+[node name="Barco" parent="." instance=ExtResource("6_xc6uk")]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_f1ijh")
+autoplay = true
